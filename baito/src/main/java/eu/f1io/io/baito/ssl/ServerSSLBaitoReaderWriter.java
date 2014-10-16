@@ -11,8 +11,8 @@ import javax.net.ssl.SSLException;
 
 import eu.f1io.io.baito.BaitoBuffer;
 import eu.f1io.io.baito.BaitoIOException;
-import eu.f1io.io.baito.BaitoReaderWriter;
-import eu.f1io.io.baito.BaitoReaderWriterFilter;
+import eu.f1io.io.baito.stream.BaitoReaderWriter;
+import eu.f1io.io.baito.stream.BaitoReaderWriterFilter;
 
 public class ServerSSLBaitoReaderWriter extends BaitoReaderWriterFilter {
 

@@ -1,4 +1,7 @@
-package eu.f1io.io.baito;
+package eu.f1io.io.baito.stream;
+
+import eu.f1io.io.baito.BaitoBuffer;
+import eu.f1io.io.baito.BaitoIOException;
 
 public abstract class BaitoReaderWriterFilter implements BaitoReaderWriter {
 
