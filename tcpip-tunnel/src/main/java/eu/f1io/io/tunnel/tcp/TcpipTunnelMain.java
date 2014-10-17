@@ -11,9 +11,9 @@ import sun.misc.Signal;
 import sun.misc.SignalHandler;
 import dagger.ObjectGraph;
 
-public class TcpipTunnel {
+public class TcpipTunnelMain {
 
-	protected final Logger log = LoggerFactory.getLogger(TcpipTunnel.class);
+	protected final Logger log = LoggerFactory.getLogger(TcpipTunnelMain.class);
 
 	@Option(name="-host") protected String hostName;
 	@Option(name="-port") protected int port = 8080;
@@ -23,7 +23,7 @@ public class TcpipTunnel {
 	protected TcpipTunnelListener listener;
 	
 	public static void main(String[] args) {
-		final int ret = new TcpipTunnel()._main(args);
+		final int ret = new TcpipTunnelMain()._main(args);
 		System.exit(ret);
 	}
 	
@@ -80,7 +80,7 @@ public class TcpipTunnel {
 	}
 
 	protected ObjectGraph constructDIGraph(String listenOnInterface2, int listenOnPort2) {
-		final MainListenerFactory fact = new MainListenerFactory(listenOnInterface2, listenOnPort2);
+		final TcpipTunnelListenerFactory fact = new TcpipTunnelListenerFactory(listenOnInterface2, listenOnPort2);
 		final ObjectGraph objectGraph = ObjectGraph.create(fact);
 		return objectGraph;
 	}

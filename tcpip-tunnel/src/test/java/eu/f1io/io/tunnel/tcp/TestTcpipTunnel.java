@@ -8,24 +8,24 @@ public class TestTcpipTunnel {
 
 	@Test
 	public void usage() {
-		final int r = new TcpipTunnel()._main(new String[]{ "-usage" });
+		final int r = new TcpipTunnelMain()._main(new String[]{ "-usage" });
 		assertEquals(0,r);
 	}
 	
 	@Test
 	public void help() {
-		final int r = new TcpipTunnel()._main(new String[]{ "-help" });
+		final int r = new TcpipTunnelMain()._main(new String[]{ "-help" });
 		assertEquals(0,r);
 	}
 	
 	@Test(expected = NullPointerException.class)
 	public void nullArgsList() {
-		new TcpipTunnel()._main(null);
+		new TcpipTunnelMain()._main(null);
 	}
 	
 	@Test
 	public void start() {
-		final TcpipTunnel app = new TcpipTunnel();
+		final TcpipTunnelMain app = new TcpipTunnelMain();
 		new Thread() {
 			@Override public void run() {
 				try {

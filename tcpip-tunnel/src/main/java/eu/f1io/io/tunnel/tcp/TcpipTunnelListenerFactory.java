@@ -18,12 +18,12 @@ import eu.f1io.thread.ThreadProvider;
 @Module(
 	injects = TcpipTunnelListener.class
 )
-public class MainListenerFactory {
+public class TcpipTunnelListenerFactory {
 
 	protected final String listenAddress;
 	protected final int listenPort;
 	
-	public MainListenerFactory(String listenAddress, int listenPort) {
+	public TcpipTunnelListenerFactory(String listenAddress, int listenPort) {
 		this.listenAddress = listenAddress;
 		this.listenPort = listenPort;
 	}
