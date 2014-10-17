@@ -16,7 +16,7 @@ public class LogConnection extends SocketConnectionFilter {
 	}
 
 	public void handle(SocketConnectionContext cntx) {
-		log.info("New connection from {}:{}", cntx.geRemoveHost(), cntx.getRemotePort());
+		log.info("New connection from {}:{}", cntx.geRemoteHost(), cntx.getRemotePort());
 		delegateToNext(cntx);
 	}
 

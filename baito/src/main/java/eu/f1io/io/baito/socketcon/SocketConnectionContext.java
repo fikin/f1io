@@ -4,7 +4,7 @@ import eu.f1io.io.baito.BaitoIOException;
 
 public interface SocketConnectionContext {
 
-	String geRemoveHost();
+	String geRemoteHost();
 
 	int getRemotePort();
 

@@ -19,7 +19,7 @@ public class LogRteErrors extends SocketConnectionFilter {
 		try {
 			delegateToNext(cntx);
 		} catch (Throwable e) {
-			log.error("Failure processing request from {}:[} : {}", cntx.getRemotePort(), cntx.geRemoveHost(), e);
+			log.error("Failure processing request from {}:[} : {}", cntx.getRemotePort(), cntx.geRemoteHost(), e);
 		}
 	}
 

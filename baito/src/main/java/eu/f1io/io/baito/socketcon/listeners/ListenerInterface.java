@@ -4,6 +4,6 @@ public interface ListenerInterface {
 
 	void listen();
 
-	void interrupt();
+	void setReadyToExit();
 
 }
