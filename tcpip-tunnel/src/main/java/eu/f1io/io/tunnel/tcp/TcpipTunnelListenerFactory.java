@@ -20,20 +20,18 @@ import eu.f1io.thread.ThreadProvider;
 )
 public class TcpipTunnelListenerFactory {
 
-	protected final String listenAddress;
-	protected final int listenPort;
+	protected TcpipCmdlineOptions cmdlineOpts;
 	
-	public TcpipTunnelListenerFactory(String listenAddress, int listenPort) {
-		this.listenAddress = listenAddress;
-		this.listenPort = listenPort;
+	public TcpipTunnelListenerFactory(TcpipCmdlineOptions cmdlineOpts2) {
+		this.cmdlineOpts = cmdlineOpts2;
 	}
 
 	protected String getListenAddress() {
-		return listenAddress;
+		return cmdlineOpts.hostName;
 	}
 
 	protected int getListenPort() {
-		return listenPort;
+		return cmdlineOpts.port;
 	}
 	
 	@Provides
